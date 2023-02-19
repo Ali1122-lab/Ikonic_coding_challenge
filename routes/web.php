@@ -17,11 +17,9 @@ use App\Http\Controllers\SuggestionController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 // Suggestions
 Route::get('/suggestions', [SuggestionController::class, 'index'])->name('suggestions.index');
